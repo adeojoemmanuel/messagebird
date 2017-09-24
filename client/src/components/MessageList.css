@@ -1,0 +1,64 @@
+.messageList {
+  display: flex;
+  flex-direction: column;
+}
+
+.messageList__close {
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 12px;
+  height: 24px;
+  width: 24px;
+  padding: 3px;
+}
+
+.messageList__heading {
+  padding-bottom: 8px;
+  line-height: 30px;
+  font-size: 24px;
+  font-weight: 400;
+  flex-shrink: 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.messageList__body {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+/* React modal overrides + styling */
+.ReactModal__Overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(24, 39, 56, 0.85) !important;
+  transition: opacity 100ms ease-in;
+}
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+.ReactModal__Overlay.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content {
+  position: relative !important;
+  width: 560px;
+  height: 90%;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  overflow: visible !important;
+  transition: transform 100ms ease-in;
+  transform: scale(0.8);
+}
+.ReactModal__Content.ReactModal__Content--after-open {
+  transform: scale(1);
+}
+.ReactModal__Content.ReactModal__Content--before-close {
+  transform: scale(0.8);
+}

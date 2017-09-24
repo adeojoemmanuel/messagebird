@@ -1,0 +1,34 @@
+.messageItem {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-bottom: 1px solid #cccccc;
+  cursor: pointer;
+}
+
+.messageItem:hover {
+  background-color: #f9f9f9;
+}
+
+.messageItem__top {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.messageItem__top__number {
+  font-size: 16px;
+  line-height: 20px;
+  flex-grow: 1;
+}
+
+.messageItem__top__time {
+  color: #9aa8bd;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.messageItem__body {
+  color: #9aa8bd;
+  font-size: 14px;
+  line-height: 20px;
+}
